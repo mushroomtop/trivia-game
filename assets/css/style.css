@@ -1,0 +1,38 @@
+body {
+    background: lightblue;
+    text-align: center;
+    font-family: sans-serif;
+    z-index: 0;
+}
+
+.answers {
+    margin: 50px 0;
+    text-align: center;
+    clear: both;
+}
+
+.pictureright, .picturewrong {
+    z-index: 100;
+    float: center;
+    text-align: center;
+    margin: auto;
+}
+
+.hide {
+    display: none;
+}
+
+.answer1:hover, .answer2:hover, .answer3:hover, .answer4:hover {
+    background-color: pink;
+}
+
+.big {
+    font-size: 40px;
+    color: darkblue;
+}
+
+.endscreen {
+    font-size: 100px;
+    color: peru;
+    z-index: 101;
+}
