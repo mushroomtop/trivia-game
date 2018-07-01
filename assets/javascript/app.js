@@ -20,14 +20,10 @@ $(".button").click(function() {
     $(this).addClass("hide");
     // unhide the timer
     $(".timer").removeClass("hide");
-});
-
 // define variable i
 var i=0;
 var complete=false;
 
-// another on click.... 
-$(".button").on("click", function() {
 //  this function has a for loop in it
 do {
       // For all of these first gotta reset timer/picturediv
