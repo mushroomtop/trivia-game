@@ -24,14 +24,12 @@ $(".button").click(function() {
 
 // define variable i
 var i=0;
-var complete;
+var complete=false;
 
 // another on click.... 
 $(".button").on("click", function() {
 //  this function has a for loop in it
 do {
-    // set this var complete to false
-    complete = false;
       // For all of these first gotta reset timer/picturediv
       $(".pictureright").addClass("hide");
       $(".picturewrong").addClass("hide");
@@ -59,7 +57,7 @@ do {
                 $(".picturewrong").removeClass("hide");
                 $(".picturewrong").append ("<p> The correct answer was: " + array.correctAnswers[i] + "</p>");
                 i++;
-                complete = setTimeout(function() {
+                setTimeout(function() {
                     complete = true;
                   }, 2000);
                 };
@@ -70,7 +68,7 @@ do {
             $(".pictureright").append ("<p> Yup </p>");
             clearInterval(timeLeft);
             i++;
-            complete = setTimeout(function() {
+            setTimeout(function() {
                 complete = true;
               }, 2000);
         });
@@ -80,7 +78,7 @@ do {
             $(".picturewrong").append ("<p> The correct answer was: " + array.correctAnswers[i] + "</p>");
             clearInterval(timeLeft);
             i++;
-            complete = setTimeout(function() {
+            setTimeout(function() {
                 complete = true;
               }, 2000);
          });
@@ -89,7 +87,7 @@ do {
             $(".picturewrong").append ("<p> The correct answer was: " + array.correctAnswers[i] + "</p>");
             clearInterval(timeLeft);
             i++;
-            complete = setTimeout(function() {
+            setTimeout(function() {
                 complete = true;
               }, 2000);
          });
@@ -98,9 +96,9 @@ do {
             $(".picturewrong").append ("<p> The correct answer was: " + array.correctAnswers[i] + "</p>");
             clearInterval(timeLeft);
             i++;
-            complete = setTimeout(function() {
+            setTimeout(function() {
                 complete = true;
               }, 2000);
          });
-        } while (complete); 
+        } while (!complete); 
         })
