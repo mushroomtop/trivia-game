@@ -24,7 +24,7 @@ $(".button").click(function() {
 
 // define variable i
 var i=0;
-var complete = true;
+var complete;
 
 // another on click.... 
 $(".button").on("click", function() {
@@ -59,7 +59,9 @@ do {
                 $(".picturewrong").removeClass("hide");
                 $(".picturewrong").append ("<p> The correct answer was: " + array.correctAnswers[i] + "</p>");
                 i++;
-                complete = true;
+                complete = setTimeout(function() {
+                    complete = true;
+                  }, 2000);
                 };
                 
 // This means if u click on the right answer you win
@@ -68,7 +70,9 @@ do {
             $(".pictureright").append ("<p> Yup </p>");
             clearInterval(timeLeft);
             i++;
-            complete= true;
+            complete = setTimeout(function() {
+                complete = true;
+              }, 2000);
         });
 //This means if u click on any other answer it says your're wrong and the correct answer shows
         $(".answer2").click (function() {
@@ -76,7 +80,27 @@ do {
             $(".picturewrong").append ("<p> The correct answer was: " + array.correctAnswers[i] + "</p>");
             clearInterval(timeLeft);
             i++;
-            complete = true;
+            complete = setTimeout(function() {
+                complete = true;
+              }, 2000);
+         });
+         $(".answer3").click (function() {
+            $(".picturewrong").removeClass("hide");
+            $(".picturewrong").append ("<p> The correct answer was: " + array.correctAnswers[i] + "</p>");
+            clearInterval(timeLeft);
+            i++;
+            complete = setTimeout(function() {
+                complete = true;
+              }, 2000);
+         });
+         $(".answer4").click (function() {
+            $(".picturewrong").removeClass("hide");
+            $(".picturewrong").append ("<p> The correct answer was: " + array.correctAnswers[i] + "</p>");
+            clearInterval(timeLeft);
+            i++;
+            complete = setTimeout(function() {
+                complete = true;
+              }, 2000);
          });
         } while (complete); 
         })
